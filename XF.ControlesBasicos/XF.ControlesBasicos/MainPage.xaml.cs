@@ -40,6 +40,7 @@ namespace XF.ControlesBasicos
                 _vmConfig = new Configuracao();
 
             Navigation.PushAsync(new ConfigPage() { BindingContext = _vmConfig });
+
         }
     }
 }

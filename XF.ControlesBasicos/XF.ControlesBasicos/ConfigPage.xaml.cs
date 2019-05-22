@@ -15,6 +15,25 @@ namespace XF.ControlesBasicos
 		public ConfigPage ()
 		{
 			InitializeComponent ();
-		}
-	}
+
+            if (!receberemail.On)
+            {
+                email.IsEnabled = false;
+            }
+        }
+
+        private void SwitchCell_OnChanged(object sender, ToggledEventArgs e)
+        {
+            if (!receberemail.On)
+            {
+                email.Text = string.Empty;
+                email.IsEnabled = false;
+            }
+            else
+            {
+                email.IsEnabled = true;
+            }
+            
+        }
+    }
 }

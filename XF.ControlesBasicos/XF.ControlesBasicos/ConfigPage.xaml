@@ -3,13 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XF.ControlesBasicos.ConfigPage">
     <ContentPage.Content>
-        <TableView>
+        <StackLayout>
+            <Entry x:Name="email"  Placeholder="Informe seu e-mail" Text="{Binding Email}" ></Entry>
+           <TableView>
             <TableView.Root>
-                <TableSection Title="Privacidade">
-                    <SwitchCell Text="Aceita receber e-mail?" On="{Binding ReceberEmail}" />
+                <TableSection Title="Privacidade"> 
+                    <SwitchCell x:Name="receberemail" Text="Aceita receber e-mail?" On="{Binding ReceberEmail}" OnChanged="SwitchCell_OnChanged" />
                 </TableSection>
             </TableView.Root>
         </TableView>
+             
+        </StackLayout>
+
     </ContentPage.Content>
+    
+
 
 </ContentPage>
